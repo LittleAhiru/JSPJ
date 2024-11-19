@@ -38,8 +38,8 @@ h1, h2, h3 {
 }
 
 .cart {
-    display: flex
-    align-items: center
+    display: flex;
+    align-items: center;
     margin-left: auto; 
     padding: 0 10px; 
 }
