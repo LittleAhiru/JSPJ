@@ -161,6 +161,26 @@ h1, h2, h3 {
     margin: 10px;
 }
 
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav ul li {
+        margin: 10px 0;
+    }
+    .cart {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .logo img {
+        width: 100px; 
+    }
+    .order-button {
+        padding: 8px 10px;
+    }
+}
+
 .footer {
     background-color: antiquewhite; 
 }
