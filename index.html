@@ -20,24 +20,25 @@
 <div class="header">
     <div class="content"></div>
     <div class="nav">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
         <div class="logo">
             <a href="Index.html"><img src="Images/Stephani_PJ_Logo%20(1).png" alt="PennyJuice Logo"></a>
         </div>
         <ul>
-            <li><a class="selected" href="Index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li>
-                <a href="flavor.html">PRODUCT</a>
-                <ul>
-                    <li><a href="orange.html">ORANGE</a></li>
-                    <li><a href="apple.html">APPLE</a></li>
-                    <li><a href="fruit punch.html">FRUIT PUNCH</a></li>
-                    <li><a href="berry plum.html">BERRY PLUM</a></li>
-                    <li><a href="strawberry kiwi.html">STRAWBERRY KIWI</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>   
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li>
+        <a href="flavors.html">PRODUCT</a>
+        <ul>
+            <li><a href="orange.html">ORANGE</a></li>
+            <li><a href="apple.html">APPLE</a></li>
+            <li><a href="fruit punch.html">FRUIT PUNCH</a></li>
+            <li><a href="berry plum.html">BERRY PLUM</a></li>
+            <li><a href="strawberry kiwi.html">STRAWBERRY KIWI</a></li>
+        </ul>
+    </li>
+    <li><a href="contact.html">CONTACT</a></li>
+</ul>
         <div class="cart">
             <a href="cart.html"><img src="Images/shopping-cart.256x230.png" alt="Shopping Cart"></a>
             <a class="order-button" href="order.html">Order</a>
@@ -60,6 +61,13 @@
 <script type="text/javascript" src="engine1/wowslider.js"></script>
 <script type="text/javascript" src="engine1/script.js"></script>
 <!-- End WOWSlider.com BODY section -->
+        <script>
+    function toggleMenu() {
+        const nav = document.querySelector('.nav');
+        nav.classList.toggle('active');
+    }
+        </script>
+        
         
         <div class="flex-container">
             <div> blah blah </div>

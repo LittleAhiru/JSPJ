@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover our delicious and healthy juice flavors at PennyJuice. From refreshing orange to vibrant berry plum, we have something for everyone.">
+    <title>Our Flavors | PennyJuice</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <div class="content"></div>
+            <div class="nav">
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
+                <div class="logo">
+                    <a href="Index.html"><img src="Images/Stephani_PJ_Logo%20(1).png" alt="PennyJuice Logo"></a>
+                </div>
+                <ul>
+                    <li><a href="Index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <a href="flavors.html">PRODUCT</a>
+                        <ul>
+                            <li><a href="orange.html">ORANGE</a></li>
+                            <li><a href="apple.html">APPLE</a></li>
+                            <li><a href="fruit punch.html">FRUIT PUNCH</a></li>
+                            <li><a href="berry plum.html">BERRY PLUM</a></li>
+                            <li><a href="strawberry kiwi.html">STRAWBERRY KIWI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html"><img src="Images/shopping-cart.256x230.png" alt="Shopping Cart"></a>
+                    <a class="order-button" href="order.html">Order</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flavor-container">
+            <div class="flavor">
+                <div class="flavor-image">
+                    <img src="Images/mockuporange.jpg" alt="Orange Juice">
+                </div>
+                <div class="flavor-description">
+                    <h1>Orange Juice</h1>
+                    <p>Our freshly squeezed Orange Juice is made with 100% organic oranges, providing you with a delicious and refreshing drink packed with vitamin C. Perfect for starting your day or enjoying as a healthy snack. No added sugars, just pure, natural goodness!</p>
+                </div>
+            </div>
+
+            <div class="flavor">
+                <div class="flavor-image">
+                    <img src="Images/mockupapple.jpg" alt="Apple Juice">
+                </div>
+                <div class="flavor-description">
+                    <h1>Apple Juice</h1>
+                    <p>Our Apple Juice is crafted with the finest organic apples, offering a sweet, crisp flavor that’s perfect for all ages. It's packed with antioxidants and is naturally refreshing, making it an ideal choice for any time of the day.</p>
+                </div>
+            </div>
+
+            <div class="flavor">
+                <div class="flavor-image">
+                    <img src="Images/mockupberryplum.jpg" alt="Berry Plum Juice">
+                </div>
+                <div class="flavor-description">
+                    <h1>Berry Plum</h1>
+                    <p>Our Berry Plum Juice combines the sweetness of berries with the richness of plums, creating a flavorful and nutritious drink. This juice is rich in vitamins and antioxidants, offering a burst of flavor with every sip.</p>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+    function toggleMenu() {
+        const nav = document.querySelector('.nav');
+        nav.classList.toggle('active');
+    }
+        </script>
+
+        <div class="footer">
+            <p>Copyright &copy; 2024-2025 PennyJuice. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about PennyJuice, our products, and our commitment to healthy, organic juices.">
+    <title>About Us | PennyJuice</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <div class="content"></div>
+            <div class="nav">
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
+                <div class="logo">
+                    <a href="Index.html"><img src="Images/Stephani_PJ_Logo%20(1).png" alt="PennyJuice Logo"></a>
+                </div>
+                <ul>
+                    <li><a href="Index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <a href="flavors.html">PRODUCT</a>
+                        <ul>
+                            <li><a href="orange.html">ORANGE</a></li>
+                            <li><a href="apple.html">APPLE</a></li>
+                            <li><a href="fruit punch.html">FRUIT PUNCH</a></li>
+                            <li><a href="berry plum.html">BERRY PLUM</a></li>
+                            <li><a href="strawberry kiwi.html">STRAWBERRY KIWI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html"><img src="Images/shopping-cart.256x230.png" alt="Shopping Cart"></a>
+                    <a class="order-button" href="order.html">Order</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Images/person-image.jpg" alt="About Us" class="about-img">
+                </div>
+                <div class="about-description">
+                    <h1>About PennyJuice</h1>
+                    <p>At PennyJuice, we believe in the power of natural, healthy ingredients to make refreshing, delicious drinks for everyone. Founded with the mission to bring nutritious, tasty juices to the families of Las Vegas, PennyJuice uses only the finest, organic ingredients. Our founder, [Person's Name], started this company with a passion for healthy living and a desire to offer juices that are both good for you and great tasting!</p>
+                    <p>Our juices are Non-GMO, free from preservatives, and made from the freshest fruits. Whether you're enjoying a glass with your morning breakfast or quenching your thirst on a hot day, PennyJuice is here to provide you with a refreshing, flavorful experience.</p>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+    function toggleMenu() {
+        const nav = document.querySelector('.nav');
+        nav.classList.toggle('active');
+    }
+        </script>
+
+        <div class="footer">
+            <p>Copyright &copy; 2024-2025 PennyJuice. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
