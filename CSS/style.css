@@ -296,6 +296,7 @@ h1, h2, h3 {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     margin-top: 10px;  /* Add space between buttons */
+    font-weight: bold;
 }
 
 .add-to-cart-button:hover {
@@ -427,6 +428,7 @@ h1, h2, h3 {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bold;
 }
 
 .flex-button:hover {
