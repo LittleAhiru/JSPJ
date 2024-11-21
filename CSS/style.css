@@ -245,9 +245,10 @@ h1, h2, h3 {
 }
 
 .flavor {
-    display: flex;
+    display: block;
     flex: 1;
-    max-width: 30%;
+    min-width: 40%;
+    max-width: 50%;
     align-items: center;
     margin-bottom: 20px;
     background-color: #f9f9f9;
@@ -258,7 +259,6 @@ h1, h2, h3 {
 
 .flavor-image {
     flex: 1;
-    max-width: 50%;
 }
 
 .flavor-image img {
@@ -270,11 +270,13 @@ h1, h2, h3 {
 .flavor-description {
     flex: 1;
     padding: 20px;
+    width: 100%;
 }
 
 .flavor-description h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
+    
 }
 
 .flavor-description p {
@@ -314,7 +316,6 @@ h1, h2, h3 {
         max-width: 100%;
     }
 }
-
 
 /* About Page Styles */
 .about-container {
@@ -361,7 +362,7 @@ h1, h2, h3 {
 .about-description p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #555;
+    color: white;
 }
 
 /* Mobile Responsiveness */
