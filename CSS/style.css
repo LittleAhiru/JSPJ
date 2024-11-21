@@ -434,6 +434,7 @@ h1, h2, h3 {
 .flex-button:hover {
     background-color: darkseagreen;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .learn-more-button {
@@ -453,6 +454,7 @@ h1, h2, h3 {
 .learn-more-button:hover {
     background-color: darkseagreen;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .item-header {
