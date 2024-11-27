@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with us at PennyJuice. Reach out for inquiries, support, or feedback.">
+    <title>Contact Us | PennyJuice</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <div class="content"></div>
+            <div class="nav">
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div> 
+                <div class="logo">
+                    <a href="index.html"><img src="Images/Stephani_PJ_Logo%20(1).png" alt="PennyJuice Logo"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <a href="flavors.html">PRODUCT</a>
+                        <ul>
+                            <li><a href="orange.html">ORANGE</a></li>
+                            <li><a href="apple.html">APPLE</a></li>
+                            <li><a href="fruit punch.html">FRUIT PUNCH</a></li>
+                            <li><a href="berry plum.html">BERRY PLUM</a></li>
+                            <li><a href="strawberry kiwi.html">STRAWBERRY KIWI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html"><img src="Images/shopping-cart.256x230.png" alt="Shopping Cart"></a>
+                    <a class="order-button" href="order.html">Order</a>
+                </div>
+            </div>
+        </div>
+        
+        <main class="contact-main">
+            <section class="contact-header">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Please fill out the form below, or contact us via our social media channels!</p>
+            </section>
+            
+             <section class="social-media">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/1528279720588648?ref=embed_page" target="_blank">
+                        <img src="Images/facebookicon.png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://twitter.com/1PENNYJUICE?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3A1PENNYJUICE%7Ctwcon%5Es2" target="_blank">
+                        <img src="Images/twittericon.png" alt="Twitter" class="social-icon">
+                    </a>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form action="submit_form.php" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="fname">Your Name</label>
+                            <input type="text" id="fname" name="fname" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="address@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows=6 placeholder="Type your message here" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+                </div>
+
+                <div class="map-section">
+                    <h2>Our Location</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12885.563611812902!2d-115.2315384!3d36.1570412!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c14bd82773ef%3A0xc2780a7e9c41d716!2sCSN%20West%20Charleston%20Student%20Center!5e0!3m2!1sen!2sus!4v1732590261690!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p>
+                <a href="https://policies.hibuwebsites.com/privacy-policy">Privacy Policy</a> | 
+                <a href="https://policies.hibuwebsites.com/cookie-policy">Do Not Share My Information</a> | 
+                <a href="https://policies.hibuwebsites.com/conditions-of-use">Conditions of Use</a> | 
+                <a href="https://policies.hibuwebsites.com/infringement-policy">Notice and Take Down Policy</a> | 
+                <a href="https://policies.hibuwebsites.com/accessibility-statement">Website Accessibility Policy</a>
+            </p>
+            <p>&copy; 2024-2025 PennyJuice. All rights reserved.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/1528279720588648?ref=embed_page" target="_blank">
+                    <img src="Images/facebook-icon.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://twitter.com/1PENNYJUICE?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3A1PENNYJUICE%7Ctwcon%5Es2" target="_blank">
+                    <img src="Images/twitter-icon.png" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
