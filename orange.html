@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="orange juice, healthy, nutritious, PennyJuice, fruit juice, kids, non-GMO, organic, natural">
+    <meta name="description" content="PennyJuice Orange flavor is packed with all-natural ingredients and bursting with refreshing flavor.">
+    <title>Orange Juice | PennyJuice</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <div class="content"></div>
+            <div class="nav">
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div> 
+                <div class="logo">
+                    <a href="index.html"><img src="Images/Stephani_PJ_Logo%20(1).png" alt="PennyJuice Logo"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <a href="flavors.html">PRODUCT</a>
+                        <ul>
+                            <li><a href="orange.html">ORANGE</a></li>
+                            <li><a href="apple.html">APPLE</a></li>
+                            <li><a href="fruit punch.html">FRUIT PUNCH</a></li>
+                            <li><a href="berry plum.html">BERRY PLUM</a></li>
+                            <li><a href="strawberry kiwi.html">STRAWBERRY KIWI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html"><img src="Images/shopping-cart.256x230.png" alt="Shopping Cart"></a>
+                    <a class="order-button" href="order.html">Order</a>
+                </div>
+            </div>
+        </div>
+
+<main class="product-page">
+            <h1>Orange Juice</h1>
+            <div class="product-info">
+                <div class="product-image">
+                    <img src="Images/mockuporange.jpg" alt="Orange Juice Bottle" class="juice-image">
+                </div>
+                <div class="product-details">
+                    <div class="product-description">
+                        <h2>Description</h2>
+                        <p>PennyJuice's Orange juice is the perfect blend of fresh, organic oranges. It's 100% natural and Non-GMO, providing a delicious and nutritious beverage for kids and adults alike. Whether you're looking for a refreshing drink or a boost of vitamin C, our orange juice delivers all the benefits of real fruit with the convenience of our special concentrate formula.</p>
+                    </div>
+
+                    <div class="product-ingredients">
+                        <h2>Ingredients</h2>
+                        <ul>
+                            <li>Organic Orange Juice Concentrate</li>
+                            <li>Natural Flavoring</li>
+                            <li>Water</li>
+                            <li>Citric Acid (for freshness)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- "Order Now" button moved here -->
+            <div class="button-container">
+    <button class="order-button">Add to Cart</button>
+    <button class="order-button">Buy Now</button>
+</div>
+
+            <div class="nutrition-facts">
+                <h2>Nutrition Facts</h2>
+                <table>
+                    <tr>
+                        <th>Serving Size</th>
+                        <td>1/2 cup (120 ml)</td>
+                    </tr>
+                    <tr>
+                        <th>Calories</th>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <th>Total Fat</th>
+                        <td>0g</td>
+                    </tr>
+                    <tr>
+                        <th>Sodium</th>
+                        <td>0mg</td>
+                    </tr>
+                    <tr>
+                        <th>Total Carbohydrates</th>
+                        <td>12g</td>
+                    </tr>
+                    <tr>
+                        <th>Dietary Fiber</th>
+                        <td>0g</td>
+                    </tr>
+                    <tr>
+                        <th>Sugars</th>
+                        <td>11g</td>
+                    </tr>
+                    <tr>
+                        <th>Protein</th>
+                        <td>1g</td>
+                    </tr>
+                    <tr>
+                        <th>Vitamin C</th>
+                        <td>90% Daily Value</td>
+                    </tr>
+                    <tr>
+                        <th>Calcium</th>
+                        <td>2% Daily Value</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>
+                <a href="https://policies.hibuwebsites.com/privacy-policy">Privacy Policy</a> | 
+                <a href="https://policies.hibuwebsites.com/cookie-policy">Do Not Share My Information</a> | 
+                <a href="https://policies.hibuwebsites.com/conditions-of-use">Conditions of Use</a> | 
+                <a href="https://policies.hibuwebsites.com/infringement-policy">Notice and Take Down Policy</a> | 
+                <a href="https://policies.hibuwebsites.com/accessibility-statement">Website Accessibility Policy</a>
+            </p>
+            <p>&copy; 2024-2025 PennyJuice. All rights reserved.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/1528279720588648?ref=embed_page" target="_blank">
+                    <img src="Images/facebooklogowhite.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/pennyjuice/" target="_blank">
+                    <img src="Images/instagramlogowhite.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://twitter.com/1PENNYJUICE?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3A1PENNYJUICE%7Ctwcon%5Es2" target="_blank">
+                    <img src="Images/twitterlogo.png" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

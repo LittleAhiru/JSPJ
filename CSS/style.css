@@ -226,10 +226,7 @@ h1, h2, h3 {
         display: flex;
     }
 
-    .order-button {
-        width: 100%;
-        margin-top: 0px;
-    }
+    
 
     .cart {
         margin-left: 0;
@@ -283,25 +280,6 @@ h1, h2, h3 {
 .flavor-description p {
     font-size: 1rem;
     line-height: 1.5;
-}
-
-.add-to-cart-button {
-    background-color: #4CAF50;  /* Green color for Add to Cart */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;  /* Add space between buttons */
-    font-weight: bold;
-}
-
-.add-to-cart-button:hover {
-    background-color: #45a049;  /* Darker green on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 /* Mobile Responsiveness */
@@ -429,6 +407,8 @@ h1, h2, h3 {
     cursor: pointer;
     transition: background-color 0.3s;
     font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none
 }
 
 .flex-button:hover {
@@ -437,25 +417,6 @@ h1, h2, h3 {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-.learn-more-button {
-    padding: 10px 20px;
-    background-color: orange;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    text-align: center;
-    display: inline-block;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    
-}
-
-.learn-more-button:hover {
-    background-color: darkseagreen;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
 
 .item-header {
     font-size: 2rem; /* Main header size */
@@ -499,17 +460,6 @@ h1, h2, h3 {
 .socials a {
     margin: 0 15px;
 }
-
-.social-icon {
-    width: 30px; /* Adjust size as needed */
-    height: 30px;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
 /* Contact Page Styles */
 .contact-main {
     padding: 40px 20px;
@@ -584,23 +534,6 @@ h1, h2, h3 {
 
 .form-group textarea {
     resize: vertical;
-}
-
-.submit-button {
-    background-color: #FF8C00;
-    color: white;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    align-self: center;
-}
-
-.submit-button:hover {
-    background-color: darkseagreen;
-    transform: scale(1.05);
 }
 
 .map-section {
@@ -688,12 +621,156 @@ textarea {
 }
 
 /* Placeholder text style */
-input::placeholder,
-textarea::placeholder {
-    font-family: 'Arial', sans-serif;  
-    color: #888;                       
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
 }
 
+.product-page h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: white
+}
+
+.product-image {
+    flex: 1;
+    max-width: 250px;
+    margin-right: 20px;
+}
+
+.juice-image {
+    width: 200%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 50px
+}
+
+.product-details {
+    flex: 2;
+    margin-left: 300px
+}
+
+.product-description, .product-ingredients, .nutrition-facts {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.product-description h2, .product-ingredients h2, .nutrition-facts h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.product-ingredients ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    color: darkgrey;
+}
+
+table th, table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.order-button {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #FFA500;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: darkseagreen;
+}
+
+
+/* cart page */
+
+.cart-item-image {
+    width: 120px;  /* Adjust the width as needed */
+    height: auto;  /* Maintain the aspect ratio */
+    object-fit: contain;  /* Ensure the image fits well within the set dimensions */
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white
+}
+
+.cart-summary {
+    width: 100%;  /* Ensure it takes up the full width */
+    background-color: white;  /* Set the background color to white */
+    padding: 20px;  /* Optional: Adds space inside the box */
+    box-sizing: border-box;  /* Ensures padding doesn't affect the overall width */
+    margin-top: 20px;  /* Optional: Adds some space above the summary */
+    border-radius: 5px;  /* Optional: Adds rounded corners */
+}
+
+.checkout-button, .continue-shopping-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff8c00;
+    color: white;
+}
+
+.remove-item {
+    background-color: #e67e00;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers horizontally */
+    justify-content: center;  /* Centers vertically */
+    min-height: 80vh;  /* Ensures it takes at least 80% of the viewport height */
+    text-align: center;  /* Optional: Centers text inside the cart page */
+}
+
+.cart-items {
+    width: 100%;  /* Makes sure these sections take up full width */
+    max-width: 800px;  /* Limits the width to avoid stretching too much on large screens */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cart-page h1 {
+    color: white;  /* Changes the color of the header text to white */
+    font-size: 2rem;  /* Adjust the font size if needed */
+    margin-bottom: 20px;  /* Adds space below the header */
+}
 
 
 /*

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="checkout, order, payment, PennyJuice, fruit juice">
+    <meta name="description" content="Complete your purchase by entering your shipping details and payment information.">
+    <title>Checkout | PennyJuice</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="header">
+            <div class="content"></div>
+            <div class="nav">
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+                <div class="logo">
+                    <a href="index.html"><img src="Images/Stephani_PJ_Logo%20(1).png" alt="PennyJuice Logo"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <a href="flavors.html">PRODUCT</a>
+                        <ul>
+                            <li><a href="orange.html">ORANGE</a></li>
+                            <li><a href="apple.html">APPLE</a></li>
+                            <li><a href="fruit punch.html">FRUIT PUNCH</a></li>
+                            <li><a href="berry plum.html">BERRY PLUM</a></li>
+                            <li><a href="strawberry kiwi.html">STRAWBERRY KIWI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html"><img src="Images/shopping-cart.256x230.png" alt="Shopping Cart"></a>
+                    <a class="order-button" href="order.html">Order</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="checkout-page">
+            <h1>Checkout</h1>
+
+            <!-- Order Summary Section -->
+            <div class="order-summary">
+                <h2>Your Order</h2>
+                <div class="order-items">
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="Images/mockuporange.jpg" alt="Orange Juice" class="juice-image">
+                        </div>
+                        <div class="cart-item-details">
+                            <h3>Orange Juice</h3>
+                            <p>Quantity: 2</p>
+                            <p>Price: $4.99</p>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="Images/mockupapple.jpg" alt="Apple Juice" class="juice-image">
+                        </div>
+                        <div class="cart-item-details">
+                            <h3>Apple Juice</h3>
+                            <p>Quantity: 1</p>
+                            <p>Price: $3.99</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Total -->
+                <div class="order-total">
+                    <h2>Total</h2>
+                    <p>Subtotal: $13.97</p>
+                    <p>Shipping: $2.99</p>
+                    <p><strong>Total: $16.96</strong></p>
+                </div>
+            </div>
+
+            <!-- Billing and Shipping Form -->
+            <div class="checkout-form">
+                <h2>Billing and Shipping Details</h2>
+                <form action="thankyou.html" method="POST">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="address">Shipping Address</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="payment">Payment Method</label>
+                    <select id="payment" name="payment" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+
+                    <div class="payment-details" id="payment-details">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+                        <label for="expiration">Expiration Date</label>
+                        <input type="month" id="expiration" name="expiration" required>
+
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                    </div>
+
+                    <div class="checkout-buttons">
+                        <button type="submit" class="order-button">Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>
+                <a href="https://policies.hibuwebsites.com/privacy-policy">Privacy Policy</a> | 
+                <a href="https://policies.hibuwebsites.com/cookie-policy">Do Not Share My Information</a> | 
+                <a href="https://policies.hibuwebsites.com/conditions-of-use">Conditions of Use</a> | 
+                <a href="https://policies.hibuwebsites.com/infringement-policy">Notice and Take Down Policy</a> | 
+                <a href="https://policies.hibuwebsites.com/accessibility-statement">Website Accessibility Policy</a>
+            </p>
+            <p>&copy; 2024-2025 PennyJuice. All rights reserved.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/1528279720588648?ref=embed_page" target="_blank">
+                    <img src="Images/facebooklogowhite.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/pennyjuice/" target="_blank">
+                    <img src="Images/instagramlogowhite.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://twitter.com/1PENNYJUICE?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3A1PENNYJUICE%7Ctwcon%5Es2" target="_blank">
+                    <img src="Images/twitterlogo.png" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+
+        // Show payment details if Credit Card is selected
+        const paymentSelect = document.querySelector('#payment');
+        const paymentDetails = document.querySelector('#payment-details');
+        paymentSelect.addEventListener('change', function() {
+            if (paymentSelect.value === 'credit-card') {
+                paymentDetails.style.display = 'block';
+            } else {
+                paymentDetails.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

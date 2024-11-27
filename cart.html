@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="orange juice, healthy, nutritious, PennyJuice, fruit juice, kids, non-GMO, organic, natural">
+    <meta name="description" content="Your cart summary for PennyJuice products.">
+    <title>Shopping Cart | PennyJuice</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="container">
+                <div class="header">
+            <div class="content"></div>
+            <div class="nav">
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div> 
+                <div class="logo">
+                    <a href="index.html"><img src="Images/Stephani_PJ_Logo%20(1).png" alt="PennyJuice Logo"></a>
+                </div>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li>
+                        <a href="flavors.html">PRODUCT</a>
+                        <ul>
+                            <li><a href="orange.html">ORANGE</a></li>
+                            <li><a href="apple.html">APPLE</a></li>
+                            <li><a href="fruit punch.html">FRUIT PUNCH</a></li>
+                            <li><a href="berry plum.html">BERRY PLUM</a></li>
+                            <li><a href="strawberry kiwi.html">STRAWBERRY KIWI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="cart">
+                    <a href="cart.html"><img src="Images/shopping-cart.256x230.png" alt="Shopping Cart"></a>
+                    <a class="order-button" href="order.html">Order</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="cart-page">
+            <h1>Your Cart</h1>
+            <div class="cart-items">
+                <!-- Example Cart Item -->
+                <div class="cart-item">
+                    <img src="Images/mockuporange.jpg" alt="Orange Juice" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h2>Orange Juice</h2>
+                        <p>Organic, Non-GMO</p>
+                        <span class="cart-item-price">$4.99</span>
+                        <div class="cart-item-quantity">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        </div>
+                    </div>
+                    <button class="flex-button">Remove</button>
+                </div>
+                
+                <div class="cart-item">
+                    <img src="Images/mockupapple.jpg" alt="Apple Juice" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h2>Apple Juice</h2>
+                        <p>Organic, Non-GMO</p>
+                        <span class="cart-item-price">$4.99</span>
+                        <div class="cart-item-quantity">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                        </div>
+                    </div>
+                    <button class="flex-button">Remove</button>
+                </div>
+
+                <!-- Repeat the above block for each item in the cart -->
+
+            </div>
+
+            <div class="cart-summary">
+                <h2>Summary</h2>
+                <p>Total Items: <span id="total-items">1</span></p>
+                <p>Total Price: $<span id="total-price">4.99</span></p>
+                <div class="cart-actions">
+                    <button class="flex-button">Proceed to Checkout</button>
+                    <button class="flex-button">Continue Shopping</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>
+                <a href="https://policies.hibuwebsites.com/privacy-policy">Privacy Policy</a> | 
+                <a href="https://policies.hibuwebsites.com/cookie-policy">Do Not Share My Information</a> | 
+                <a href="https://policies.hibuwebsites.com/conditions-of-use">Conditions of Use</a> | 
+                <a href="https://policies.hibuwebsites.com/infringement-policy">Notice and Take Down Policy</a> | 
+                <a href="https://policies.hibuwebsites.com/accessibility-statement">Website Accessibility Policy</a>
+            </p>
+            <p>&copy; 2024-2025 PennyJuice. All rights reserved.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/1528279720588648?ref=embed_page" target="_blank">
+                    <img src="Images/facebooklogowhite.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/pennyjuice/" target="_blank">
+                    <img src="Images/instagramlogowhite.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://twitter.com/1PENNYJUICE?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Escreen-name%3A1PENNYJUICE%7Ctwcon%5Es2" target="_blank">
+                    <img src="Images/twitterlogo.png" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+        </footer>
+    </div>
+    
+     <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+
+        // Example functionality for quantity updates
+        const quantityInput = document.querySelector('#quantity');
+        const totalPriceElement = document.querySelector('#total-price');
+        const totalItemsElement = document.querySelector('#total-items');
+
+        quantityInput.addEventListener('input', () => {
+            const pricePerItem = 4.99; // Example price per item
+            const quantity = parseInt(quantityInput.value) || 1;
+            const totalPrice = (pricePerItem * quantity).toFixed(2);
+
+            totalPriceElement.textContent = totalPrice;
+            totalItemsElement.textContent = quantity;
+        });
+    </script>
+</body>
+</html>
