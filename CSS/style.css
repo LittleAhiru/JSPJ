@@ -627,6 +627,25 @@ textarea {
 }
 
 /* Placeholder text style */
+.product-header {
+    margin-bottom: 30px;
+}
+
+.product-header h1 {
+    font-size: 2.5rem;
+    color: white;
+    padding: 40px 20px 0px;
+    text-align: center;
+}
+
+.product-header p {
+    font-size: 1.2rem;
+    color: darkgrey;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .product-info {
     display: flex;
     justify-content: space-between;
