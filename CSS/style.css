@@ -397,7 +397,7 @@ h1, h2, h3 {
 .flex-description {
     margin-top: 10px;
     padding-bottom: 10px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: white;
     line-height: 1.5;
 }
@@ -435,12 +435,12 @@ h1, h2, h3 {
 }
 
 .item-subheader {
-    font-size: 1rem; /* Smaller header size */
+    font-size: 1.3rem; /* Smaller header size */
     font-weight: normal;
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    color:orange; /* Slightly lighter color for the subtitle */
+    color:darkgrey; /* Slightly lighter color for the subtitle */
 }
 
 .footer {
