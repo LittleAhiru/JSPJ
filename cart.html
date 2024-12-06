@@ -135,6 +135,50 @@
             totalPriceElement.textContent = totalPrice;
             totalItemsElement.textContent = quantity;
         });
+        
+        const removeButtons = document.querySelectorAll('.flex-button');
+removeButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        const cartItem = e.target.closest('.cart-item');
+        cartItem.remove();
+        updateCartSummary(); // Add a function to recalculate totals after removal.
+    });
+});
+        document.addEventListener('DOMContentLoaded', () => {
+    function updateCartSummary() {
+        const items = document.querySelectorAll('.cart-item');
+        let totalItems = 0;
+        let totalPrice = 0;
+
+        items.forEach(item => {
+            const quantity = parseInt(item.querySelector('input[name="quantity"]').value) || 0;
+            const price = parseFloat(item.querySelector('.cart-item-price').textContent.replace('$', '')) || 0;
+            totalItems += quantity;
+            totalPrice += quantity * price;
+        });
+
+        document.getElementById('total-items').textContent = totalItems;
+        document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+    }
+
+    // Add event listener for quantity changes
+    document.querySelectorAll('input[name="quantity"]').forEach(input => {
+        input.addEventListener('input', updateCartSummary);
+    });
+
+    // Add event listener for remove buttons
+    document.querySelectorAll('.flex-button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const cartItem = e.target.closest('.cart-item');
+            cartItem.remove();
+            updateCartSummary();
+        });
+    });
+});
+
+
     </script>
+    
+    
 </body>
 </html>
