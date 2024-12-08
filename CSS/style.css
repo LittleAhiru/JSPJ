@@ -172,6 +172,11 @@ h1, h2, h3 {
 
 
 /* Mobile Responsiveness */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
 @media (max-width: 768px) {
     .nav ul {
         display: none; /* Hide the links initially on mobile */
@@ -647,20 +652,20 @@ textarea {
     text-align: center;
 }
 
-.product-header2 {
+#product-header2 {
     margin-bottom: 30px;
     display: block;
     width: 100%;
 }
 
-.product-header2 h1 {
+#product-header2 h1 {
     font-size: 2.5rem;
     color: white;
     padding: 40px 20px 0px;
     text-align: center;
 }
 
-.product-header2 p {
+#product-header2 p {
     font-size: 1.2rem;
     color: darkgrey;
     max-width: 800px;
@@ -693,7 +698,6 @@ textarea {
     width: 200%;
     height: auto;
     border-radius: 8px;
-    margin-left: 30%
 }
 
 .product-details {
@@ -704,13 +708,13 @@ textarea {
 .product-description, .product-ingredients, .product-info, .nutrition-facts {
     margin-bottom: 20px;
     color: white;
-	width: 80%;
+	width: 65%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .nutrition-facts {
-	text-align: center;
+	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -719,10 +723,6 @@ textarea {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: white;
-}
-
-.nutrition-facts {
-	text-align: left;
 }
 
 .button-container {
@@ -736,7 +736,7 @@ textarea {
 }
 
 table {
-    width: 100%;
+    width: 89%;
     border-collapse: collapse;
     margin-top: 10px;
     color: darkgrey;
@@ -750,7 +750,7 @@ table th, table td {
 
 .order-button {
     display: block;
-    width: 150px;
+    width: 130px;
     margin: 20px auto;
     padding: 10px;
     background-color: #FFA500;
@@ -862,7 +862,7 @@ table th, table td {
 .cart-number {
     position: absolute;
     top: 10px;
-    right: 160px;
+    right: 140px;
     background-color: red;
     color: white;
     border-radius: 50%;
@@ -870,6 +870,7 @@ table th, table td {
     font-size: 14px;
     font-weight: bold;
 }
+
 
 
 /*
