@@ -407,6 +407,7 @@ h1, h2, h3 {
     line-height: 1.5;
 }
 
+/* General button styling */
 .flex-button {
     margin-top: 10px; /* Ensure the button is below the description */
     padding: 10px 20px;
@@ -415,19 +416,22 @@ h1, h2, h3 {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and scale */
     font-weight: bold;
     font-size: 1.2em;
-    text-decoration: none
+    text-decoration: none; /* Remove any underlines if it's a link */
+    display: inline-block; /* Make sure the button doesn't behave like a block-level element */
+    user-select: none; /* Prevent text selection */
 }
 
+/* Hover effect */
 .flex-button:hover {
     background-color: darkseagreen;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 12px 22px;
-    font-size: 1.3em;
-    border-radius: 30px;
+    transform: scale(1.1); /* Slightly increase the size without changing layout */
+    border-radius: 30px; /* Slightly more rounded corners on hover */
 }
+
 /*add*/
 
 .item-header {
@@ -678,7 +682,7 @@ textarea {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
-    gap: 20px;
+    
 }
 
 .product-page h1 {
@@ -726,7 +730,8 @@ textarea {
 }
 
 .button-container {
-	display: inline-block;
+    display: inline-grid;
+    text-align: center;
 }
 
 .product-ingredients ul {
@@ -736,7 +741,7 @@ textarea {
 }
 
 table {
-    width: 89%;
+    width: 90%;
     border-collapse: collapse;
     margin-top: 10px;
     color: darkgrey;
@@ -871,6 +876,12 @@ table th, table td {
     font-weight: bold;
 }
 
+/* Prevent text highlighting when clicking on buttons */
+button, .flex-button {
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+}
 
 
 /*
