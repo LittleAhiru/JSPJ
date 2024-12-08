@@ -64,10 +64,14 @@ h1, h2, h3 {
     color: white;
     text-decoration: none;
     border-radius: 20px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and scale */
     font-family: Arial;
     font-weight: bold;
     margin-right: 10px;
+    font-size: 1.2em;
+     display: inline-block; /* Make sure the button doesn't behave like a block-level element */
+    user-select: none; /* Prevent text selection */
 }
 
 .order-button:hover {
@@ -104,21 +108,28 @@ h1, h2, h3 {
 }
 
 .nav ul li a {
-    font-family: Arial;
-    color: black;
-    text-decoration: none;
+    margin-top: -4px;
+    padding: 10px 20px;
+    background-color: WHITE;
+    color: BLACK;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Smooth transition for background and scale */
     font-weight: bold;
-    padding: 10px 10px;
-    display: block;
+    font-size: 1.1m;
+    text-decoration: none; /* Remove any underlines if it's a link */
+     display: inline-block; /* Make sure the button doesn't behave like a block-level element */
+    user-select: none; /* Prevent text selection */
+    user-select: none; /* Prevent text selection */
 }
 
 .nav ul li a:hover {
-    background-color: darkseagreen;
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
+   background-color: darkseagreen;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    
+    transform: scale(1.1); /* Slightly increase the size without changing layout */
+    border-radius: 30px; /* Slightly more rounded corners on hover */
+     color: white;
 }
 
 .nav ul li ul {
@@ -165,7 +176,6 @@ h1, h2, h3 {
     color: black;
     width: 100%;
     text-align: center;
-    line-height: 15px;
     margin: 10px;
 }
 
@@ -348,6 +358,12 @@ h1, h2, h3 {
     color: white;
 }
 
+.about-description h2 {
+     font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
 .about-description p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -401,7 +417,7 @@ h1, h2, h3 {
 
 .flex-description {
     margin-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     font-size: 1.3rem;
     color: white;
     line-height: 1.5;
@@ -416,7 +432,7 @@ h1, h2, h3 {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background and scale */
+    transition: transform 0.3s; /* Smooth transition for background and scale */
     font-weight: bold;
     font-size: 1.2em;
     text-decoration: none; /* Remove any underlines if it's a link */
@@ -438,7 +454,7 @@ h1, h2, h3 {
     font-size: 2rem; /* Main header size */
     font-weight: bold;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-align: center;
     color: white;
 }
@@ -446,7 +462,7 @@ h1, h2, h3 {
 .item-subheader {
     font-size: 1.3rem; /* Smaller header size */
     font-weight: normal;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 25px;
     text-align: center;
     color:darkgrey; /* Slightly lighter color for the subtitle */
@@ -651,7 +667,6 @@ textarea {
 .product-header p {
     font-size: 1.2rem;
     color: darkgrey;
-    max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
@@ -770,6 +785,10 @@ table th, table td {
     background-color: darkseagreen;
 }
 
+.order-total {
+    text-align: center;
+    margin-top: 30px;
+}
 
 /* cart page */
 .cart-header {
@@ -802,14 +821,12 @@ table th, table td {
     flex-direction: column;
     gap: 20px;
 }
-
 .cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white
 }
-
 .cart-summary {
     width: 100%;  /* Ensure it takes up the full width */
     background-color: white;  /* Set the background color to white */
@@ -827,6 +844,155 @@ table th, table td {
     border-radius: 5px;
     background-color: #ff8c00;
     color: white;
+}
+
+
+.checkout-form h2, p, input, select{
+    margin: 20px 0 2% 0;
+}
+
+.checkout-button, .continue-shopping-button {
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff8c00;
+    color: white;
+}
+
+.remove-item {
+    background-color: #e67e00;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* cart page */
+.checkout-header {
+    margin-bottom: 30px;
+	padding: 40px 0;
+}
+
+.checkout-header h1 {
+    font-size: 2.5rem;
+    color: white;
+	text-align: center;
+}
+
+.cart-header {
+    margin-bottom: 30px;
+}
+
+.cart-header h1 {
+    font-size: 2.5rem;
+    color: white;
+    padding: 40px 20px 0px;
+    text-align: center;
+}
+
+.cart-header p {
+    font-size: 1.2rem;
+    color: darkgrey;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cart-item-image {
+    width: 20em;  /* Adjust the width as needed */
+    height: auto;  /* Maintain the aspect ratio */
+    object-fit: contain;  /* Ensure the image fits well within the set dimensions */
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white
+}
+
+.cartList {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 5%;
+	padding-top: 4%;
+	color: white;
+	background-color: rgba(220 ,220 ,220, 0.2);
+	padding: 30px;
+	border-radius: 15px;
+    width: 40%;
+    justify-self: center
+}
+
+.cartList img, h2, h3, p {
+	margin: 0 0 10px;
+	width: 100%;
+}
+
+.cartList h2, h3, p {
+	padding: 0 0 3
+}
+
+#totalHeader {
+	text-align: center;
+}
+
+.checkout-form {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    color: white;
+    background-color:  rgba(220 ,220 ,220, 0.2);
+    padding: 10px;
+    border-radius: 15px;
+    border-color:black;
+}
+
+.checkout-form h2, p, input, select{
+    margin: 5px 0 2% 0;
+}
+
+#BillingSubheader {
+    text-align: center;
+}
+
+#CartSubheader {
+    text-align: center;
+}
+
+.checkout-button, .continue-shopping-button {
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff8c00;
+    color: white;
+}
+
+.checkout-button, .continue-shopping-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff8c00;
+    color: white;
+}
+
+.checkout-buttons .flex-button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .remove-item {
@@ -858,6 +1024,13 @@ table th, table td {
     color: white;  /* Changes the color of the header text to white */
     font-size: 2rem;  /* Adjust the font size if needed */
     margin-bottom: 20px;  /* Adds space below the header */
+}
+
+.checkout-header p {
+    font-size: 1.2rem;
+    color: darkgrey;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .cart {
