@@ -362,6 +362,7 @@ h1, h2, h3 {
      font-size: 2rem;
     color: white;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .about-description p {
@@ -542,6 +543,10 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
+#payment-details {
+    margin-left: 0%;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -583,7 +588,7 @@ h1, h2, h3 {
     margin-top: 20px;
     width: 100%;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 50px auto;
 }
 
 .social-media {
@@ -728,13 +733,13 @@ textarea {
     margin-bottom: 20px;
     color: white;
 	width: 65%;
-	margin-left: auto;
+	margin-left: 20%;
 	margin-right: auto;
 }
 
 .nutrition-facts {
 	text-align: left;
-	margin-left: auto;
+	margin-left: 20%;
 	margin-right: auto;
 }
 
@@ -790,9 +795,13 @@ table th, table td {
     margin-top: 30px;
 }
 
+.checkout-total {
+    text-align: right;
+}
 /* cart page */
 .cart-header {
-    margin-bottom: 30px;
+   margin-bottom: 30px;
+    padding-bottom: 68px;
 }
 
 .cart-header h1 {
@@ -814,6 +823,7 @@ table th, table td {
     width: 120px;  /* Adjust the width as needed */
     height: auto;  /* Maintain the aspect ratio */
     object-fit: contain;  /* Ensure the image fits well within the set dimensions */
+    border-radius: 8px;
 }
 
 .cart-items {
@@ -821,11 +831,25 @@ table th, table td {
     flex-direction: column;
     gap: 20px;
 }
+
+.cart-item-details {
+    text-align: center;
+}
+
+#cartjuiceheader {
+        font-size: 1.5em;
+    text-align: center;
+        margin-bottom: 5px;
+}
 .cart-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    color: white
+    color: white;
+    column-gap: 20%;
+}
+
+.cart-item-price {
+    padding: 20px;
 }
 .cart-summary {
     width: 100%;  /* Ensure it takes up the full width */
@@ -834,6 +858,14 @@ table th, table td {
     box-sizing: border-box;  /* Ensures padding doesn't affect the overall width */
     margin-top: 20px;  /* Optional: Adds some space above the summary */
     border-radius: 5px;  /* Optional: Adds rounded corners */
+}
+
+#cartsummaryheader {
+    font-size: 2rem;
+}
+
+#SubtotalID {
+    width: 87%;
 }
 
 .checkout-button, .continue-shopping-button {
@@ -845,12 +877,6 @@ table th, table td {
     background-color: #ff8c00;
     color: white;
 }
-
-
-.checkout-form h2, p, input, select{
-    margin: 20px 0 2% 0;
-}
-
 .checkout-button, .continue-shopping-button {
     padding: 20px 20px;
     font-size: 16px;
@@ -914,7 +940,6 @@ table th, table td {
 
 .cart-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     color: white
 }
@@ -928,12 +953,17 @@ table th, table td {
 	background-color: rgba(220 ,220 ,220, 0.2);
 	padding: 30px;
 	border-radius: 15px;
-    width: 40%;
+    width: 60%;
     justify-self: center
 }
 
+.order-summary {
+  align-content: center;
+    padding-left: 150px;
+    padding-right: 300px;
+}
 .cartList img, h2, h3, p {
-	margin: 0 0 10px;
+	margin: 0 0 20px;
 	width: 100%;
 }
 
@@ -946,27 +976,41 @@ table th, table td {
 }
 
 .checkout-form {
-    width: 40%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10%;
     color: white;
     background-color:  rgba(220 ,220 ,220, 0.2);
-    padding: 10px;
+    padding: 30px;
     border-radius: 15px;
     border-color:black;
 }
+#quantity {
+    width: 100px;
+}
 
-.checkout-form h2, p, input, select{
-    margin: 5px 0 2% 0;
+#organictag {
+    color: darkgrey;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 #BillingSubheader {
     text-align: center;
+    font-size: 2rem;
+    padding-bottom: 20px;
 }
 
 #CartSubheader {
     text-align: center;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+#TotalSubheader {
+    font-size: 2rem;
+    width: 92%;
 }
 
 .checkout-button, .continue-shopping-button {
@@ -1014,10 +1058,17 @@ table th, table td {
 }
 
 .cart-items {
-    width: 100%;  /* Makes sure these sections take up full width */
-    max-width: 800px;  /* Limits the width to avoid stretching too much on large screens */
-    padding: 20px;
-    box-sizing: border-box;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    padding-top: 4%;
+    color: white;
+    background-color: rgba(220, 220, 220, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    width: 60%;
+    justify-self: center;
+
 }
 
 .cart-page h1 {

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="container">
-                <div class="header">
+        <div class="header">
             <div class="content"></div>
             <div class="nav">
                 <div class="hamburger" onclick="toggleMenu()">&#9776;</div> 
@@ -22,82 +22,80 @@
                     <li><a href="about.html">ABOUT</a></li>
                     <li>
                         <a href="flavors.html">PRODUCTS</a>
-                       <ul>
-            <li><a href="orange.html">ORANGE</a></li>
-            <li><a href="apple.html">APPLE</a></li>
-            <li><a href="fruitpunch.html">FRUIT PUNCH</a></li>
-            <li><a href="berryplum.html">BERRY PLUM</a></li>
-            <li><a href="strawberrykiwi.html">STRAWBERRY KIWI</a></li>
-            <li><a href="coconutpineapple.html">COCONUT PINEAPPLE</a></li>
-            <li><a href="grape.html">GRAPE</a></li>
-            <li><a href="peachmango.html">PEACH MANGO</a></li>
-            <li><a href="greenjuice.html">GREEN JUICE</a></li>
-            <li><a href="strawberrybanana.html">STRAWBERRY BANANA</a></li>
-            <li><a href="pineapple.html">PINEAPPLE</a></li>
-            <li><a href="wildblueberry.html">WILD BLUEBERRY</a></li>
-        </ul>
+                        <ul>
+                            <li><a href="orange.html">ORANGE</a></li>
+                            <li><a href="apple.html">APPLE</a></li>
+                            <li><a href="fruitpunch.html">FRUIT PUNCH</a></li>
+                            <li><a href="berryplum.html">BERRY PLUM</a></li>
+                            <li><a href="strawberrykiwi.html">STRAWBERRY KIWI</a></li>
+                            <li><a href="coconutpineapple.html">COCONUT PINEAPPLE</a></li>
+                            <li><a href="grape.html">GRAPE</a></li>
+                            <li><a href="peachmango.html">PEACH MANGO</a></li>
+                            <li><a href="greenjuice.html">GREEN JUICE</a></li>
+                            <li><a href="strawberrybanana.html">STRAWBERRY BANANA</a></li>
+                            <li><a href="pineapple.html">PINEAPPLE</a></li>
+                            <li><a href="wildblueberry.html">WILD BLUEBERRY</a></li>
+                        </ul>
                     </li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
                 <div class="cart">
-                        <a href="cart.html">
-                            <img src="Images/shopping-cart.256x230.png" alt="Shopping Cart">
-                            <span id="cart-number" class="cart-number">0</span> <!-- Cart number -->
-                        </a>
-                        <a class="order-button" href="order.html">Order</a>
-                    </div>
+                    <a href="cart.html">
+                        <img src="Images/shopping-cart.256x230.png" alt="Shopping Cart">
+                        <span id="cart-number" class="cart-number">0</span>
+                    </a>
+                    <a class="order-button" href="order.html">Order</a>
+                </div>
             </div>
         </div>
-        
-        
-            <section class="cart-header">
-                <h1>Your Cart</h1>
-                <p>Ready for purchase?</p>
-            </section>
-        
-        
+
+        <section class="cart-header">
+            <h1>YOUR CART</h1>
+            <p>Ready for purchase?</p>
+        </section>
+
         <main class="cart-page">
             <div class="cart-items">
+                <!-- Empty Cart Message -->
+                <p id="empty-cart-message" style="display: none; font-weight: bold; font-size: 1.5em;">Your cart is empty...</p>
+
                 <!-- Example Cart Item -->
                 <div class="cart-item">
                     <img src="Images/mockuporange.jpg" alt="Orange Juice" class="cart-item-image">
                     <div class="cart-item-details">
-                        <h2>Orange Juice</h2>
-                        <p>Organic, Non-GMO</p>
+                        <h2 id="cartjuiceheader">Orange Juice</h2>
+                        <p id="organictag">Organic, Non-GMO</p>
                         <span class="cart-item-price">$4.99</span>
                         <div class="cart-item-quantity">
                             <label for="quantity">Quantity:</label>
-                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                            <input type="number" name="quantity" min="1" value="1">
                         </div>
                     </div>
                     <button class="flex-button">Remove</button>
                 </div>
-                
+
                 <div class="cart-item">
                     <img src="Images/mockupapple.jpg" alt="Apple Juice" class="cart-item-image">
                     <div class="cart-item-details">
-                        <h2>Apple Juice</h2>
-                        <p>Organic, Non-GMO</p>
+                        <h2 id="cartjuiceheader">Apple Juice</h2>
+                        <p id="organictag">Organic, Non-GMO</p>
                         <span class="cart-item-price">$4.99</span>
                         <div class="cart-item-quantity">
                             <label for="quantity">Quantity:</label>
-                            <input type="number" id="quantity" name="quantity" min="1" value="1">
+                            <input type="number" name="quantity" min="1" value="1">
                         </div>
                     </div>
                     <button class="flex-button">Remove</button>
                 </div>
-
-                <!-- Repeat the above block for each item in the cart -->
-
             </div>
 
             <div class="cart-summary">
-                <h2>Summary</h2>
+                <h2 id="cartsummaryheader">Summary</h2>
                 <p>Total Items: <span id="total-items">2</span></p>
                 <p>Total Price: $<span id="total-price">9.98</span></p>
                 <div class="cart-actions">
-                    <button class="flex-button">Proceed to Checkout</button>
-                    <button class="flex-button">Continue Shopping</button>
+                    <a href="order.html" class="flex-button">Proceed to Checkout</a>
+                    <a href="flavors.html" class="flex-button">Continue Shopping</a>
                 </div>
             </div>
         </main>
@@ -124,77 +122,50 @@
             </div>
         </footer>
     </div>
-    
-     <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.nav');
-            nav.classList.toggle('active');
-        }
-    </script>
 
     <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.nav');
-            nav.classList.toggle('active');
-        }
-
-        // Example functionality for quantity updates
-        const quantityInput = document.querySelector('#quantity');
-        const totalPriceElement = document.querySelector('#total-price');
-        const totalItemsElement = document.querySelector('#total-items');
-
-        quantityInput.addEventListener('input', () => {
-            const pricePerItem = 4.99; // Example price per item
-            const quantity = parseInt(quantityInput.value) || 1;
-            const totalPrice = (pricePerItem * quantity).toFixed(2);
-
-            totalPriceElement.textContent = totalPrice;
-            totalItemsElement.textContent = quantity;
-        });
-        
-        const removeButtons = document.querySelectorAll('.flex-button');
-removeButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        const cartItem = e.target.closest('.cart-item');
-        cartItem.remove();
-        updateCartSummary(); // Add a function to recalculate totals after removal.
-    });
-});
         document.addEventListener('DOMContentLoaded', () => {
-    function updateCartSummary() {
-        const items = document.querySelectorAll('.cart-item');
-        let totalItems = 0;
-        let totalPrice = 0;
+            function updateCartSummary() {
+                const items = document.querySelectorAll('.cart-item');
+                let totalItems = 0;
+                let totalPrice = 0;
 
-        items.forEach(item => {
-            const quantity = parseInt(item.querySelector('input[name="quantity"]').value) || 0;
-            const price = parseFloat(item.querySelector('.cart-item-price').textContent.replace('$', '')) || 0;
-            totalItems += quantity;
-            totalPrice += quantity * price;
-        });
+                items.forEach(item => {
+                    const quantity = parseInt(item.querySelector('input[name="quantity"]').value) || 0;
+                    const price = parseFloat(item.querySelector('.cart-item-price').textContent.replace('$', '')) || 0;
+                    totalItems += quantity;
+                    totalPrice += quantity * price;
+                });
 
-        document.getElementById('total-items').textContent = totalItems;
-        document.getElementById('total-price').textContent = totalPrice.toFixed(2);
-    }
+                document.getElementById('total-items').textContent = totalItems;
+                document.getElementById('total-price').textContent = totalPrice.toFixed(2);
 
-    // Add event listener for quantity changes
-    document.querySelectorAll('input[name="quantity"]').forEach(input => {
-        input.addEventListener('input', updateCartSummary);
-    });
+                const emptyCartMessage = document.getElementById('empty-cart-message');
 
-    // Add event listener for remove buttons
-    document.querySelectorAll('.flex-button').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const cartItem = e.target.closest('.cart-item');
-            cartItem.remove();
+                if (items.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                }
+            }
+
+            // Add event listener for quantity changes
+            document.querySelectorAll('input[name="quantity"]').forEach(input => {
+                input.addEventListener('input', updateCartSummary);
+            });
+
+            // Add event listener for remove buttons
+            document.querySelectorAll('.flex-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const cartItem = e.target.closest('.cart-item');
+                    cartItem.remove();
+                    updateCartSummary();
+                });
+            });
+
+            // Initial update to handle the case when the page loads with no items
             updateCartSummary();
         });
-    });
-});
-
-
     </script>
-    
-    
 </body>
 </html>
